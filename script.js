@@ -151,6 +151,7 @@ switch (job) {
 * Coding challenge 1
 * */
 
+/*
 let name1 = 'John', name2 = 'Smith', name3 = 'Alex';
 let johnAge = 50, johnHeight = 150, smithAge = 30, smithHeight = 100, alexAge = 200, alexHeight = 300;
 let johnCalc = (johnAge * 5) + johnHeight, smithCalc = (smithAge * 5) + smithHeight, alexCalc = (alexAge * 5) + alexHeight;
@@ -164,3 +165,146 @@ if(johnCalc > smithCalc && johnCalc > alexCalc) {
 } else {
     console.log(name3 + ' has won with the score of ' + alexCalc);
 }
+*/
+
+//----------------------------------------------------------------------------------------------------------------------
+/*
+* Functions, statements and expressions
+* */
+
+/*
+//here we are declaring a function with a parameter in parentheses
+function calculateAge(yearOfBirth) {
+    const age = 2018 - yearOfBirth;
+    //here we are returning the value of the execution of the function
+    return age;
+}
+
+//here we are calling the function
+// let alexAge = calculateAge(1992);
+// let ageMike = calculateAge(1969);
+// console.log(alexAge);
+// console.log(ageMike);
+
+//here we have a function with two parameters
+function yearsUntilRetirement(name, yearOfBirth) {
+    //here we are calling the precedent function to make some calculations
+    //we can call functions inside a function
+    const age = calculateAge(yearOfBirth);
+    const retirement = 65 - age;
+    if(retirement < 1){
+        console.log(name + ' already retired.');
+    } else {
+        console.log(name + ' retires in ' + retirement + ' years.');
+    }
+}
+
+//here we are calling the function with two parameters for execution
+yearsUntilRetirement('Alex', 1992);
+yearsUntilRetirement('Mike', 1969);
+yearsUntilRetirement('Marry', 1948);
+*/
+
+//----------------------------------------------------------------------------------------------------------------------
+/*
+* Arrays
+* */
+
+/*
+//here are two variants of declaring arrays
+let names = ['Alex', 'Mike', 'John'];
+let years = new Array(1990, 1969, 1948);
+
+//here we are printing the first element of the array
+console.log(names[0]);
+//here we are assigning a value to the second element of the array
+names[1] = 'Arnold';
+console.log(names);
+
+//here we have an array with different values
+let john = ['John', 'Smith', 1990, 'Developer', false];
+
+//here we are adding an element to the end of array
+john.push('red');
+//here are adding en element at the beginning of the array
+john.unshift('Mister');
+//here we are removing the last element of the array
+john.pop();
+//here we are removing the first element of the array
+john.shift();
+//here we are returning the position of the element in array
+alert(john.indexOf('Smith'));
+
+//if there is no element in the array, indexOf return -1 value
+if(john.indexOf('Teacher') === -1) {
+    console.log('John is not a teacher');
+}
+
+console.log(john);
+*/
+
+//----------------------------------------------------------------------------------------------------------------------
+/*
+* Objects, Properties and Methods
+* */
+
+/*
+//here we are declaring an object with properties
+let john = {
+    name: 'John',
+    lastName: 'Smith',
+    yearOfBirth: 1990,
+    job: 'Developer',
+    isMarried: false
+};
+
+//here we are printing lastName property of the john object
+console.log(john.lastName);
+
+//here we have declared a variable with a string name of the property of the object
+let xzy = 'job';
+//here we are printing the property using the variable declared upper
+console.log(john[xzy]);
+
+//here we are assigning new values to the properties of the object
+john.lastName = 'Miller';
+john['job'] = 'Codder';
+
+console.log(john);
+
+
+//here is another method of declaring an object
+let jane = new Object();
+//here we are assigning properties to the new object
+jane.name = 'Jane';
+jane.lastName = 'Smith';
+jane['yearOfBieth'] = 1969;
+jane['job'] = 'Retired';
+jane['isMarried'] = true;
+
+console.log(jane);
+*/
+
+/*
+//here we have a more complex object with array and function as parameters
+let john = {
+  name: 'John',
+  lastName: 'Smith',
+  yearOfBirth: 1990,
+  job: 'Developer',
+  isMarried: true,
+  //here we have an array as a parameter for the object
+  family: ['Jane', 'Mark', 'Bob'],
+  //here we have a function as a parameter of the object
+  calculateAge: function() {
+    //here we are using the value of the object by using this keyword
+    //also we are assigning a new property for the object
+    this.age =  2018 - this.yearOfBirth;
+  }
+};
+
+//here we are calling the function from the object
+//!!!Important, this is called method
+john.calculateAge();
+console.log(john);
+*/
