@@ -308,5 +308,3 @@ let john = {
 john.calculateAge();
 console.log(john);
 */
-
-console.log('Hello world');
